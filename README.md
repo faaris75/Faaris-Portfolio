@@ -14,3 +14,5 @@ Tech: Python
 
 🧠 Trivia Game 
 A fun text-based trivia app. It was one of my first deep dives into handling user input and logic loops in Python.
+
+ETC........
