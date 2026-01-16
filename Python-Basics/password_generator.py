@@ -1,0 +1,63 @@
+#length
+#lowercase
+#special characters
+#digits
+
+import random 
+import string
+
+def generate_password():
+    length = int(input("What is the length you want your password to be:").strip()) 
+    include_uppercase = input("Do you want to include upper case (yes/no):").strip().lower()
+    include_lowercase = input("Do you want to include lower case (yes/no):").strip().lower()
+    include_special = input("Do you want special characters (yes/no):").strip().lower()
+    include_digits = input("Do you want digits (yes/no):").strip().lower()
+
+    if length < 4 :
+        print("Length has to be greater than 4.")
+        return
+    
+    lower = string.ascii_letters if include_lowercase == "yes" else ""
+    upper = string.ascii_uppercase if include_uppercase == "yes" else ""
+    special = string.punctuation if include_special == "yes" else ""
+    digits = string.digits if include_digits == "yes" else ""   
+
+    all_char = lower + upper + special + digits
+
+    required_char = []
+    if include_lowercase == "yes":
+        required_char.append(random.choice(lower))
+    if include_uppercase == "yes":
+        required_char.append(random.choice(upper))
+    if include_special == "yes":
+        required_char.append(random.choice(special))
+    if include_digits == "yes":
+        required_char.append(random.choice(digits))
+
+    remaining_char = length - len(required_char)
+
+    for _ in range(remaining_char):
+        required_char.append(random.choice(all_char))
+        password = required_char
+        
+    random.shuffle(password)
+    str_password = "".join(password)
+    print(str_password)
+    
+    
+generate_password()
+
+    
+
+   
+
+
+
+
+
+
+
+    
+    
+
+
