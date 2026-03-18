@@ -1,7 +1,6 @@
 #pragma once
 
 class MileageModel {
-
 private:
     double baseMileage;
     double fuelPrice;
@@ -24,7 +23,9 @@ public:
     double costUphill(double slopeAngle) const;
     double costDownhill(double slopeAngle) const;
 
-    
-
+    int scoreFlat() const;
+    int scoreUphill(double slopeAngle) const;
+    int scoreDownhill(double slopeAngle) const;
+    double averageScore(double slopeAngle) const;
     void displayScoreBoard(double slopeAngle) const;
 };

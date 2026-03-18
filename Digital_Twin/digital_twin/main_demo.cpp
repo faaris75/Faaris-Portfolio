@@ -12,9 +12,10 @@
 #include "functions/mileagemodel.cpp"
 
 
-MileageModel car(15.0, 1.79, 100.0);
+MileageModel car_mileage(15.0, 1.79, 100.0);
 Drag car_drag(130, true, false);
 Speed car_speed;
+double slope = 10.0;
 
 //Ben's Functions//
 
@@ -23,7 +24,7 @@ Speed car_speed;
 double getAerodynamicsScore()   { return car_drag.getEfficiencyScore(); }
 double getEngineScore()         { return 100.0; } //Rasiq
 double getSpeedScore()   { return car_speed.getAverageScore(); }
-double getTireScore()           { return 100.0; }
+double getMileageScore()           { return car_mileage.averageScore(slope); }
 
 
 int main() {
@@ -65,7 +66,7 @@ int main() {
         getAerodynamicsScore(),  
         getEngineScore(),        
         getSpeedScore(),  
-        getTireScore()           
+        getMileageScore()           
     };
 
     double overall = 0.0;
@@ -87,7 +88,7 @@ int main() {
     std::cout << "  Aerodynamics       : " << scores[1] << " / 100  (placeholder)\n";
     std::cout << "  Engine             : " << scores[2] << " / 100  (placeholder)\n";
     std::cout << "  Speed              : " << scores[3] << " / 100  (placeholder)\n";
-    std::cout << "  Tires              : " << scores[4] << " / 100  (placeholder)\n";
+    std::cout << "  Mileage            : " << scores[4] << " / 100  (placeholder)\n";
 
     std::cout << "\n  Overall Score      : " << overall << " / 100\n";
 
