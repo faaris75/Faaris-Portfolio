@@ -1,14 +1,14 @@
 
 #pragma once 
 
-// 2024 Audi RS6 Avant Performance (C8): 2203 kg curb, 12.2 L/100km combined, Crr 0.014
+// 2024 Audi RS6 Avant Performance (C8): 2090 kg curb, 12.2 L/100km combined, Crr 0.014
 
 struct WeightConfig {
-    double curb_mass_kg                 = 2203.0;
+    double curb_mass_kg                 = 2090.0;
     double passenger_mass_kg            = 0.0;
     double cargo_mass_kg                = 0.0;
-    double fuel_mass_kg                 = 57.9;   // full tank: ~65 L x 0.89 kg/L
-    double crr                          = 0.014;
+    double fuel_mass_kg                 = 53.29;   // full tank: ~73 L x 0.75 kg/L
+    double crr                          = 0.014; //coeff of rr estimated to 0.014
     double gravity_mps2                 = 9.81;
     double base_consumption_L_per_100km = 12.2;
     double consumption_per_100kg        = 0.5;
