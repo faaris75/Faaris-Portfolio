@@ -6,7 +6,7 @@ import platform
 import re
 
 # --- PAGE CONFIG ---
-st.set_page_config(page_title="RS 6 Digital Twin Simulator", layout="wide")
+st.set_page_config(page_title="RS6 Digital Twin Simulator", layout="wide")
 
 st.markdown("""
 <style>
