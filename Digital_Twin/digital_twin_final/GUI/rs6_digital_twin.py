@@ -57,7 +57,8 @@ def run_cpp_digital_twin(passengers, cargo, windows_open, fuel, throttle, ambien
         return None, ""
 
 # --- UI LAYOUT ---
-st.title("RS 6 DIGITAL TWIN: FUEL EFFICIENCY SIMULATOR")
+# CHANGED: "RS 6" is now "RS6"
+st.title("RS6 DIGITAL TWIN: FUEL EFFICIENCY SIMULATOR")
 
 col_inputs, col_main = st.columns([1, 3])
 
