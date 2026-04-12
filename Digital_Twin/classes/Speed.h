@@ -12,8 +12,8 @@ double update(double throttle, double dt, double accelRate) {
    dt = std::max(dt, 0.0); 
    accelRate_ = accelRate;
  
-   const double targetRpm = idleRpm_ + throttle * (maxRpm_ - idleRpm_); 
-   double shiftRpm  = 2000 + throttle * (maxRpm_ - 2000); // only allow shifts above 2000 rpm
+   const double targetRpm = maxRpm_ - 200; // target RPM is slighlty below redline
+   double shiftRpm  = 2000 + throttle * (maxRpm_ - 2200); // only allow shifts above 2000 rpm
  
    if (currentRpm_ < targetRpm) {
       currentRpm_ += accelRate_ * throttle * dt; 
